@@ -28,7 +28,11 @@ namespace oop3{
                     }
                 }else{
                     for(int i = 0; i < strlen(mass); i++){
-                        vector[i] = mass[i];
+                        if((mass[i] != '0') && (mass[i] != '1') && (mass[i] != 'X')){
+                            vector[i] = 'X';
+                        }else{
+                            vector[i] = mass[i];
+                        }
                     }
                 }
             };
@@ -47,6 +51,10 @@ namespace oop3{
             int positiveness();
     };
 
+
+    double get_d(string string1);
+    int input_int();
+    void printf_flag(int f);
 }
 
 #endif //OOP3_FUNCTIONS_H
